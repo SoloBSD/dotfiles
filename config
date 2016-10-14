@@ -75,31 +75,31 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $w1
+bindsym $mod+2 workspace $w2
+bindsym $mod+3 workspace $w3
+bindsym $mod+4 workspace $w4
+bindsym $mod+5 workspace $w5
+bindsym $mod+6 workspace $w6
+bindsym $mod+7 workspace $w7
+bindsym $mod+8 workspace $w8
+bindsym $mod+9 workspace $w9
+bindsym $mod+0 workspace $w10
 
 # define names for workspaces with some nice symbols
 set $w0 0✪
-set $w1 1❶ 
-set $w2 2❷ 
-set $w3 3❸ 
-set $w4 4❹ 
-set $w5 5❺ 
-set $w6 6❻ 
-set $w7 7❼ ☘
-set $w8 8❽ 
-set $w9 9❾ 
-set $w10 10❿
-set $w11 11
-set $w12 12
+set $w1 1❶
+set $w2 2❷
+set $w3 3❸
+set $w4 4❹
+set $w5 5❺
+set $w6 6❻
+set $w7 7❼
+set $w8 8❽
+set $w9 9❾
+set $w10 10❿
+set $w11 11
+set $w12 12
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -177,7 +177,7 @@ bar {
 	position bottom
         #font pango:Economica, FontAwesome 15
 	colors {
-            background #339933
+            background #33993333
             separator #FEDBC7
 	    focused_workspace #ffffff #ffffff #520030         
 	    active_workspace #ffffff #ffffff #520030

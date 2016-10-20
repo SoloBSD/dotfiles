@@ -176,15 +176,16 @@ client.urgent           $urg   $urg       #FF9933 $arc
 bar {
         status_command i3status --config ~/.config/i3/i3status.conf
 	position bottom
-        #font pango:Economica, FontAwesome 15
+	font pango: Inconsolata 10
+        #font pango:Economica, FontAwesome 15 
 	colors {
-            background #33993333
-            separator #FEDBC7
-	    focused_workspace #ffffff #ffffff #520030         
-	    active_workspace #ffffff #ffffff #520030
-	    inactive_workspace #520030 #520030 #E21E32
-            urgent_workspace #E21E32 #E21E32 #ffffff
-            #statusline $main
+            background #FFFFFF
+            separator #000000
+	    focused_workspace #ffffff #ffffff #000000         
+	    active_workspace #ffffff #ffffff #000000
+	    inactive_workspace #FFFFFF #FFFFFF #AAAAAA
+            urgent_workspace #FF0031 #FF0031 #ffffff
+            statusline #000000
             #separator $main
         }
 }

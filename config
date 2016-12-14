@@ -179,13 +179,13 @@ bar {
 	font pango: Inconsolata 10
         #font pango:Economica, FontAwesome 15 
 	colors {
-            background #FFFFFF
-            separator #000000
-	    focused_workspace #ffffff #ffffff #000000         
-	    active_workspace #ffffff #ffffff #000000
-	    inactive_workspace #FFFFFF #FFFFFF #AAAAAA
-            urgent_workspace #FF0031 #FF0031 #ffffff
-            statusline #000000
+            background #1F1F1F
+            separator #757575
+	    focused_workspace #1F1F1F #1F1F1F #FFFFFF         
+	    active_workspace #1F1F1F #1F1F1F #FFFFFF
+	    inactive_workspace #2F2F2F #2F2F2F #252525
+            urgent_workspace #AB4747 #AB4747 #FFFFFF
+            statusline #757575
             #separator $main
         }
 }

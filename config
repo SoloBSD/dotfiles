@@ -18,7 +18,8 @@ set $mod Mod4
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:Droid Sans Mono 8 #DejaVu Sans Mono 8
-font pango:Futura BK BT Book 8
+#font pango:Futura BK BT Book 8
+font pango:roboto-mono 10
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -31,14 +32,15 @@ font pango:Futura BK BT Book 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminology #xterm -fa "Andale Mono:pixelsize=11" #i3-sensible-terminal
+bindsym $mod+Return exec terminology #xterm -fa "Andale Mono:pixelsize=11" i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec i3-dmenu-desktop
-bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 30 -padding 0 -opacity "85" -bw 0 -bc "#000000" -bg "#000000" -fg "#ffffff" -hlbg "#ffffff" -hlfg "#000000" -font "Monospace 12"
+#bindsym $mod+d exec i3-dmenu-desktop --dmenu='rofi -dmenu -i -p "run" -config "$HOME/.config/i3/rofi.conf"'
+bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 30 -padding 0 -opacity "85" -bw 0 -bc "#000000" -bg "#212121" -fg "#2979ff" -hlbg "#212121" -hlfg "#9e9e9e" -font "Monospace 12"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -159,6 +161,12 @@ set $urg #BF6060
 set $arc #660000
 set $green #60BF60
 
+# Colors
+set $black #212121
+set $gray #424242
+set $accent #2979FF
+set $urgent #FF3D00
+
 # brightness
 bindsym XF86MonBrightnessUp exec "xbacklight +10"
 bindsym XF86MonBrightnessDown exec "xbacklight -10"
@@ -179,14 +187,23 @@ bar {
 	font pango: Inconsolata 10
         #font pango:Economica, FontAwesome 15 
 	colors {
-            background #252525
-            separator #757575
-	    focused_workspace #252525 #252525 #FFFFFF         
-	    active_workspace #252525 #252525 #FFFFFF
-	    inactive_workspace #191919 #191919 #252525
-            urgent_workspace #AB4747 #AB4747 #F3F4F5
-            statusline #757575
-            #separator $main
+#           background #282828BB
+#           separator #928374
+#	    focused_workspace #EBDBB2 #EBDBB2 #282828         
+#	    active_workspace #EBDBB2 #282828BB #EBDBB2
+#	    inactive_workspace #282828BB #282828BB #A89984
+#           urgent_workspace #282828BB #282828BB #EBDBB2
+#           statusline #EBDBB2
+#           separator $main
+            background $black
+            statusline $accent
+	    separator $accent
+
+	    # ---| border | bg | fg |---
+	    focused_workspace $accent $accent $black
+	    active_workspace $black $black $accent
+	    inactive_workspace $black $black $accent
+            urgent_workspace $black $black $urgent
         }
 }
 

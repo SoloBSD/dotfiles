@@ -40,7 +40,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec i3-dmenu-desktop
 #bindsym $mod+d exec i3-dmenu-desktop --dmenu='rofi -dmenu -i -p "run" -config "$HOME/.config/i3/rofi.conf"'
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 30 -padding 0 -opacity "85" -bw 0 -bc "#000000" -bg "#212121" -fg "#2979ff" -hlbg "#212121" -hlfg "#9e9e9e" -font "Monospace 12"
+bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 30 -padding 0 -opacity "85" -bw 0 -separator-style none -bc "#000000" -bg "#212121" -fg "#2979ff" -hlbg "#212121" -hlfg "#9e9e9e" -font "Monospace 12"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.

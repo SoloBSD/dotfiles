@@ -1,0 +1,11 @@
+{
+    "company_name": "Morgan Stanley", 
+    "contact_email": "garcaroj@morganstanley.com", 
+    "contact_name": "Guillermo Garcia-Rojas", 
+    "hostname": "3fdcaab109134ee6bb3e6863c50f15f2", 
+    "instance_count": 10, 
+    "license_date": 2137105010, 
+    "license_key": "0f219863056312657d4aa5144effca4298ef0504a0d26f0b6669d29ee8e6cfe4", 
+    "license_type": "basic", 
+    "subscription_name": "Red Hat Ansible Tower, Self-Support (10 Managed Nodes)"
+}

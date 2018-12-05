@@ -19,7 +19,9 @@ set $mod Mod4
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:Droid Sans Mono 8 #DejaVu Sans Mono 8
 #font pango:Futura BK BT Book 8
-font pango:roboto-mono 10
+#font pango:roboto-mono 10
+set $ft pango: Inconsolata Nerd Font 10
+font $ft
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -164,7 +166,7 @@ set $green #60BF60
 # Colors
 set $black #212121
 set $gray #424242
-set $accent #2979FF
+set $accent #F0C674
 set $urgent #FF3D00
 
 # brightness

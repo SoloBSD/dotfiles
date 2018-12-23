@@ -92,31 +92,34 @@ bindsym $mod+9 workspace $w9
 bindsym $mod+0 workspace $w10
 
 # define names for workspaces with some nice symbols
-set $w0 0✪
-set $w1 1❶
-set $w2 2❷
-set $w3 3❸
-set $w4 4❹
-set $w5 5❺
-set $w6 6❻
-set $w7 7❼
-set $w8 8❽
-set $w9 9❾
-set $w10 10❿
-set $w11 11
-set $w12 12
+set $w1 1:Chromium
+set $w2 2:IRC
+set $w3 3:Email
+set $w4 4:Terminals
+set $w5 5:Music
+set $w6 6:
+set $w7 7:
+set $w8 8:
+set $w9 9:
+set $w10 10:
+set $w11 11:
+set $w12 12:
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace $w1
+bindsym $mod+Shift+2 move container to workspace $w2
+bindsym $mod+Shift+3 move container to workspace $w3
+bindsym $mod+Shift+4 move container to workspace $w4
+bindsym $mod+Shift+5 move container to workspace $w5
+bindsym $mod+Shift+6 move container to workspace $w6
+bindsym $mod+Shift+7 move container to workspace $w7
+bindsym $mod+Shift+8 move container to workspace $w8
+bindsym $mod+Shift+9 move container to workspace $w9
+bindsym $mod+Shift+0 move container to workspace $w10
+
+assign [class="Chromium-browser"] $w1
+assign [class="Hexchat"] $w2
+assign [class="Sylpheed"] $w3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -181,6 +184,9 @@ client.unfocused        $arc   $arc       #CCCCCC $arc
 client.urgent           $urg   $urg       #FF9933 $arc
 #client.background
 
+# Start Polybar
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -217,11 +223,12 @@ exec_always --no-startup-id feh --bg-scale ~/Pictures/14334277_1861802754047751_
 #exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
 
 # Media Player
-#bindsym XF86AudioPlay exec cmus +
+#bindsym XF86AudioPlay exec cmus
 
 # volume
-#bindsym XF86AudioRaiseVolume exec "pamixer -i 10 --allow-boost"
-#bindsym XF86AudioLowerVolume exec "pamixer -d 10 --allow-boost"
-#bindsym XF86AudioMute exec "pamixer -t"
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #Increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #Decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle #Mute sound
+
 bindsym $mod+Shift+L exec i3lock
 #bindsym $mod+W exec --no-startup-id rofi -show window
